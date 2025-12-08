@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+// import React from 'react'; // React not directly used, only useState
+import { useState } from 'react';
 import { 
   BarChart2, 
   Brain, 
@@ -9,7 +10,7 @@ import {
 const services = [
   {
     icon: <BarChart2 className="h-8 w-8" />,
-    title: 'Data Science et Analyse de Données',
+    title: 'Data science et Analyse de Données',
     description: 'Exploitez la puissance des données pour générer des insights pertinents et améliorer la prise de décision.',
     useCases: [
       {
@@ -28,7 +29,7 @@ const services = [
   },
   {
     icon: <Brain className="h-8 w-8" />,
-    title: 'MLOps et Déploiement de Modèles IA',
+    title: 'MLOps et Déploiement de modèles IA',
     description: "Automatisez et optimisez le cycle de vie des modèles IA, de l'entraînement au déploiement.",
     useCases: [
       {
@@ -67,14 +68,14 @@ const services = [
 ];
 
 const Services = () => {
-  const [selectedService, setSelectedService] = useState(null);
+  const [selectedService, setSelectedService] = useState<typeof services[0] | null>(null);
 
   return (
     <section id="services" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-primary-violet mb-4 font-poppins">Nos Services</h2>
-          <p className="text-xl text-gray-600 font-roboto">Des solutions avancées en Data Science, MLOps et Cloud</p>
+          <h2 className="text-4xl font-bold text-primary-violet mb-4 font-poppins">Nos services</h2>
+          <p className="text-xl text-gray-600 font-roboto">Des solutions avancées en data science, MLOps et Cloud</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

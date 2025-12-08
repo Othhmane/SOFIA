@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react'; // Not needed with modern JSX Transform
 
 const Logo = () => {
   return (

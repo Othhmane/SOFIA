@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react'; // Not needed with modern JSX Transform
 
 const etudesDeCas = [
   {
@@ -26,7 +26,7 @@ const Portfolio = () => {
     <section id="portfolio" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-primary-violet mb-4 font-poppins">Histoires de Réussite</h2>
+          <h2 className="text-4xl font-bold text-primary-violet mb-4 font-poppins">Histoires de réussite</h2>
           <p className="text-xl text-gray-600">Des résultats concrets pour des entreprises réelles</p>
         </div>
 

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react'; // Not needed with modern JSX Transform
 import { Search, Lightbulb, Code, HeartHandshake } from 'lucide-react';
 
 const steps = [
@@ -29,7 +29,7 @@ const Methodologie = () => {
     <section id="methodologie" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-primary-violet mb-4 font-poppins">Notre Méthodologie</h2>
+          <h2 className="text-4xl font-bold text-primary-violet mb-4 font-poppins">Notre méthodologie</h2>
           <p className="text-xl text-gray-600">
             Une approche éprouvée pour garantir des résultats durables et performants
           </p>

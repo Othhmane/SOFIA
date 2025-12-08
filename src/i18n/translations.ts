@@ -2,7 +2,7 @@ export const translations = {
   fr: {
     nav: {
       home: 'Accueil',
-      services: 'Nos Services',
+      services: 'Nos services',
       methodology: 'Méthodologie',
       portfolio: 'Portfolio',
       about: 'À Propos',
@@ -11,12 +11,12 @@ export const translations = {
     },
     hero: {
       title: 'Transformez vos données en décisions stratégiques',
-      subtitle: "Stimulez la croissance et l'innovation de votre entreprise grâce à des solutions IA avancées et des analyses basées sur vos données.",
-      explore: 'Découvrir nos Services',
+      subtitle: "Accélérez votre transformation digitale en centralisant des données fiables et en les valorisant par la business intelligence et l'intelligence artificielle",
+      explore: 'Découvrir nos services',
       contact: 'Contactez-nous'
     },
     services: {
-      title: 'Nos Services',
+      title: 'Nos services',
       subtitle: 'Des solutions complètes pour répondre à vos besoins en IA et données',
       items: {
         dataAnalysis: {
@@ -24,7 +24,7 @@ export const translations = {
           description: 'Transformez vos données brutes en insights exploitables grâce à des outils de visualisation performants.'
         },
         aiDevelopment: {
-          title: 'Développement de Solutions IA',
+          title: 'Développement de solutions IA',
           description: 'Des modèles IA personnalisés pour répondre aux objectifs spécifiques de votre entreprise.'
         },
         consulting: {
@@ -36,7 +36,7 @@ export const translations = {
           description: 'Concevez et développez des pipelines et des infrastructures de données évolutifs.'
         },
         ml: {
-          title: 'Solutions de Machine Learning',
+          title: 'Solutions de machine learning',
           description: 'Des modèles prédictifs avancés et des systèmes IA conçus pour améliorer vos performances.'
         },
         cloud: {
@@ -54,7 +54,7 @@ export const translations = {
       }
     },
     methodology: {
-      title: 'Notre Méthodologie',
+      title: 'Notre méthodologie',
       subtitle: 'Une approche éprouvée pour garantir des résultats optimaux',
       steps: {
         audit: {
@@ -76,7 +76,7 @@ export const translations = {
       }
     },
     portfolio: {
-      title: 'Histoires de Réussite',
+      title: 'Histoires de réussite',
       subtitle: 'Des résultats mesurables pour des entreprises comme la vôtre',
       caseStudies: {
         financial: {
@@ -97,7 +97,7 @@ export const translations = {
       }
     },
     team: {
-      title: 'Notre Équipe',
+      title: 'Notre équipe',
       subtitle: 'Une expertise inégalée en science des données, gestion de projet et architecture cloud pour vous offrir des solutions exceptionnelles en IA et BI.',
       connect: 'Connectez-vous avec nous sur LinkedIn'
     },

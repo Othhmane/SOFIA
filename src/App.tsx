@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react'; // Not needed with modern JSX Transform
 import { LanguageProvider } from './contexts/LanguageContext';
 import Header from './components/Header';
 import Hero from './components/Hero';

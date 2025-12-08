@@ -1,6 +1,4 @@
-import React from 'react';
 import { Linkedin } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
 
 const teamMembers = [
   {
@@ -26,15 +24,15 @@ const teamMembers = [
   },
   {
     name: 'Abdelhak DIFFALLAH',
-    role: 'Business Intelligence Developer',
+    role: 'Business intelligence developer',
     bio: 'Consultant senior en analyse et pilotage de la performance, il cumule une solide expérience dans le numérique, la téléphonie mobile et le secteur pharmaceutique.',
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
     linkedin: "https://www.linkedin.com/in/abdelhak-d-55707ba9/"
   },
   {
     name: 'Chouaib BELDJOUDI',
-    role: 'Business Intelligence Developer',
-    bio: 'Docteur en statistique, enseignant-chercheur et consultant en Business Intelligence, il allie expertise scientifique, pédagogie et accompagnement stratégique des entreprises dans la valorisation de leurs données',
+    role: 'Business intelligence developer',
+    bio: 'Docteur en statistique, enseignant-chercheur et consultant en business intelligence, il allie expertise scientifique, pédagogie et accompagnement stratégique des entreprises dans la valorisation de leurs données',
     image: "https://images.unsplash.com/photo-1556157382-97eda2f9e2bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
     linkedin: "https://www.linkedin.com/in/chouaib-beldjoudi-64437a93/"
   },
@@ -42,20 +40,18 @@ const teamMembers = [
     name: 'Balthazar Mehus',
     role: 'Data Engineer',
     bio: 'Consultant en data engineering spécialisé dans les environnements logistiques, il conçoit et industrialise des pipelines de données robustes, structure les flux d’information et met en place des outils de pilotage permettant d’optimiser la performance opérationnelle et la prise de décision',
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
-    linkedin: "https://www.linkedin.com/in/balth-mhs/"
+    image: "https://www.linkedin.com/in/balth-mhs/overlay/photo/",
+    linkedin: "https://media.licdn.com/dms/image/v2/D4E03AQEyzAfmvw3uRQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1672759693738?e=1766620800&v=beta&t=4N80Qtr2AW90nEMJr3K4zhlpR49rYkAFGcxYbvl9Jro"
   }
 ];
 
 const Team = () => {
-  const { t } = useLanguage();
-
   return (
     <section id="team" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-primary-violet mb-4 font-poppins">
-            Notre Équipe
+            Notre équipe
           </h2>
           <p className="text-xl text-gray-600 font-roboto max-w-3xl mx-auto">
             Une équipe d'experts passionnés qui combine expertise technique et vision stratégique 
