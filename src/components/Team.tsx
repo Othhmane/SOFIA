@@ -4,7 +4,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 const teamMembers = [
   {
-    name: 'Anis HADDOUCHE',
+    name: 'Anis Mohamed HADDOUCHE',
     role: 'Responsable Data',
     bio: 'Docteur en Statistiques, Anis possède une expertise approfondie en science des données, modélisation prédictive et IA.',
     image: "https://media.licdn.com/dms/image/v2/C4E03AQF1Sh1wMQchzg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1615128698138?e=1743033600&v=beta&t=e2FeaC2Nc8P0ShLIxxz-LGFJ6aA_s8Zssy38kcvWxM0",
