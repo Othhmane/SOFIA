@@ -10,27 +10,40 @@ import {
 const services = [
   {
     icon: <BarChart3 className="h-8 w-8" />,
-    title: 'Intégrateur BI et Analytics',
-    description: 'Intégrez des solutions Business Intelligence complètes pour transformer vos données en insights stratégiques.',
+    title: 'Centralisation & valorisation des données',
+    descriptionParts: [
+      { text: 'Vos données sont partout, mais elles ne sont pas encore utilisées comme un véritable outil de décision.', className: 'text-gray-600' },
+      { text: 'Les décisions sont prises avec retard, les reportings prennent trop de temps et les équipes ne parlent pas le même langage', className: 'text-gray-600' },
+      { text: 'Nous vous aidons à transformer vos données existantes en un outil de pilotage simple, fiable et orienté résultats.', className: 'text-gray-600' },
+      { text: 'Devenez une entreprise Data-Driven', className: 'text-primary-violet font-semibold' }
+    ],
+
     useCases: [
       {
-        title: 'Tableaux de Bord Exécutifs',
-        description: 'Création de dashboards interactifs pour le pilotage stratégique en temps réel.'
+        title: 'Ce que ce service vous apporte',
+        description: '• Une vision claire de votre activité en temps réel\n• Des décisions plus rapides et plus fiables\n• Un gain de temps immédiat sur le reporting et l\'analyse'
       },
       {
-        title: 'Intégration ETL/ELT',
-        description: 'Automatisation des flux de données depuis toutes vos sources système.'
+        title: 'Ce que nous mettons en place',
+        description: '• Centralisation de vos données (ERP, CRM, Excel, bases métiers)\n• Structuration et fiabilisation des données clés\n• Tableaux de bord BI orientés pilotage et performance'
       },
       {
-        title: 'Reporting Automatisé',
-        description: 'Génération automatique de rapports personnalisés selon vos besoins métier.'
+        title: 'Les résultats concrets',
+        description: '• Un chiffre unique et fiable, partagé par tous\n• Moins d\'intuition, plus de pilotage\n• Une entreprise réellement data-driven'
+      },
+      {
+        title: 'Pour qui ?',
+        description: 'Ce service est conçu pour les PME et ETI qui veulent :\n• Sortir des reportings manuels,\n• Structurer leur donnée,\n• Poser les bases d\'une transformation data durable.'
+        
       }
     ]
   },
   {
     icon: <Brain className="h-8 w-8" />,
     title: 'Automatisation et Déploiement de modèles IA',
-    description: 'De l\'analyse de données à l\'automatisation complète : exploitez la puissance des données et optimisez le cycle de vie des modèles IA.',
+    descriptionParts: [
+      { text: 'De l\'analyse de données à l\'automatisation complète : exploitez la puissance des données et optimisez le cycle de vie des modèles IA.', className: 'text-gray-600' }
+    ],
     useCases: [
       {
         title: 'Analyse Prédictive Avancée',
@@ -49,7 +62,9 @@ const services = [
   {
     icon: <Users className="h-8 w-8" />,
     title: 'Formation et Conseil',
-    description: 'Accompagnez vos équipes dans leur transformation digitale avec des formations sur mesure et un conseil stratégique expert.',
+    descriptionParts: [
+      { text: 'Accompagnez vos équipes dans leur transformation digitale avec des formations sur mesure et un conseil stratégique expert.', className: 'text-gray-600' }
+    ],
     useCases: [
       {
         title: 'Formations Data & IA',
@@ -91,9 +106,15 @@ const Services = () => {
               <h3 className="text-xl font-semibold text-primary-dark mb-2 font-poppins">
                 {service.title}
               </h3>
-              <p className="text-gray-600 font-roboto">{service.description}</p>
+              <div className="font-roboto space-y-3">
+                {service.descriptionParts.map((part, index) => (
+                  <p key={index} className={`${part.className} leading-relaxed`}>
+                    {part.text}
+                  </p>
+                ))}
+              </div>
               <p className="text-sm text-primary-blue mt-4 font-roboto">
-                Cliquez pour voir les cas d'usage →
+                En savoir plus
               </p>
             </div>
           ))}
@@ -120,14 +141,14 @@ const Services = () => {
               
               <div className="space-y-6">
                 {selectedService.useCases.map((useCase, index) => (
-                  <div 
+                  <div
                     key={index}
                     className="p-4 bg-gray-50 rounded-lg border border-gray-100"
                   >
                     <h4 className="text-lg font-semibold text-primary-dark mb-2 font-poppins">
                       {useCase.title}
                     </h4>
-                    <p className="text-gray-600 font-roboto">
+                    <p className="text-gray-600 font-roboto whitespace-pre-line">
                       {useCase.description}
                     </p>
                   </div>
