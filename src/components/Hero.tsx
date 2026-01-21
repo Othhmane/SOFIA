@@ -35,8 +35,7 @@ const Hero = () => {
           <div className="md:w-1/2 flex justify-center">
             <div className="relative">
               <img
-                src="src/public/logo.png" // Remplacez par le chemin de votre logo
-                alt="SOFIA Brain Logo"
+                src="" // Remplacez par le chemin de votre logo
                 className="h-100 w-120 object-contain"
               />
             </div>
