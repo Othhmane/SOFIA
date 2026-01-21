@@ -5,7 +5,7 @@ const teamMembers = [
     name: 'Anis Mohamed HADDOUCHE',
     role: 'Head of Data',
     bio: 'Docteur en Statistiques, Anis possède une expertise approfondie en science des données, modélisation prédictive et IA.',
-    image: "https://media.licdn.com/dms/image/v2/C4E03AQF1Sh1wMQchzg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1615128698138?e=1743033600&v=beta&t=e2FeaC2Nc8P0ShLIxxz-LGFJ6aA_s8Zssy38kcvWxM0",
+    image: "/images/team/anis.jpg",
     linkedin: "https://www.linkedin.com/in/anis-m-haddouche-a8667175/"
   },
   {
@@ -19,7 +19,7 @@ const teamMembers = [
     name: 'Adel MOULOUA',
     role: 'Architecte Cloud Senior',
     bio: 'Spécialiste reconnu en architecture cloud, Adel conçoit des solutions scalables et sécurisées.',
-    image: "https://media.licdn.com/dms/image/v2/D4E03AQGzlX9mWw7qYw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1675610566778?e=1743033600&v=beta&t=06C6ShzQl97y6nGNiDv-SGmkHgJwcdSqeVQ0mvn8LPM",
+    image: "/images/team/takaya.jpg",
     linkedin: "https://www.linkedin.com/in/adel-mouloua/"
   },
   {
@@ -33,14 +33,14 @@ const teamMembers = [
     name: 'Chouaib BELDJOUDI',
     role: 'Business intelligence developer',
     bio: 'Docteur en statistique, enseignant-chercheur et consultant en business intelligence, il allie expertise scientifique, pédagogie et accompagnement stratégique des entreprises dans la valorisation de leurs données',
-    image: "https://images.unsplash.com/photo-1556157382-97eda2f9e2bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+    image: "/images/team/chouaib.jpg",
     linkedin: "https://www.linkedin.com/in/chouaib-beldjoudi-64437a93/"
   },
   {
     name: 'Balthazar Mehus',
     role: 'Data Engineer',
     bio: 'Consultant en data engineering spécialisé dans les environnements logistiques, il conçoit et industrialise des pipelines de données robustes, structure les flux d’information et met en place des outils de pilotage permettant d’optimiser la performance opérationnelle et la prise de décision',
-    image: "https://www.linkedin.com/in/balth-mhs/overlay/photo/",
+    image: "/images/team/baltazar.jpg",
     linkedin: "https://www.linkedin.com/in/balth-mhs/"
   }
 ];
