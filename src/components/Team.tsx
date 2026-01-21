@@ -5,21 +5,21 @@ const teamMembers = [
     name: 'Anis Mohamed HADDOUCHE',
     role: 'Head of Data',
     bio: 'Docteur en Statistiques, Anis possède une expertise approfondie en science des données, modélisation prédictive et IA.',
-    image: "/images/team/anis.jpg",
+    image: "/images/team/anis.jpeg",
     linkedin: "https://www.linkedin.com/in/anis-m-haddouche-a8667175/"
   },
   {
     name: 'Khalil SAID GUERNI',
     role: 'Chef de Projet Senior',
     bio: 'Expert en gestion de projets complexes, Khalil supervise les projets IA et BI avec excellence.',
-    image: "https://media.licdn.com/dms/image/v2/C4D03AQFZRWhJSypuJg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1602965827138?e=1743033600&v=beta&t=DaQQUeFyeuRebZYRmdNmuaN6yp26A4XT18N4GGdJk34",
+    image: "/images/team/khalil.jpeg",
     linkedin: "https://www.linkedin.com/in/khalil-said-guerni/"
   },
   {
     name: 'Adel MOULOUA',
     role: 'Architecte Cloud Senior',
     bio: 'Spécialiste reconnu en architecture cloud, Adel conçoit des solutions scalables et sécurisées.',
-    image: "/images/team/takaya.jpg",
+    image: "/images/team/takaya.jpeg",
     linkedin: "https://www.linkedin.com/in/adel-mouloua/"
   },
   {
@@ -33,14 +33,14 @@ const teamMembers = [
     name: 'Chouaib BELDJOUDI',
     role: 'Business intelligence developer',
     bio: 'Docteur en statistique, enseignant-chercheur et consultant en business intelligence, il allie expertise scientifique, pédagogie et accompagnement stratégique des entreprises dans la valorisation de leurs données',
-    image: "/images/team/chouaib.jpg",
+    image: "/images/team/chouaib.jpeg",
     linkedin: "https://www.linkedin.com/in/chouaib-beldjoudi-64437a93/"
   },
   {
     name: 'Balthazar Mehus',
     role: 'Data Engineer',
     bio: 'Consultant en data engineering spécialisé dans les environnements logistiques, il conçoit et industrialise des pipelines de données robustes, structure les flux d’information et met en place des outils de pilotage permettant d’optimiser la performance opérationnelle et la prise de décision',
-    image: "/images/team/baltazar.jpg",
+    image: "/images/team/baltazar.jpeg",
     linkedin: "https://www.linkedin.com/in/balth-mhs/"
   }
 ];
