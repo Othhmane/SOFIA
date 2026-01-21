@@ -41,7 +41,7 @@ const teamMembers = [
     role: 'Data Engineer',
     bio: 'Consultant en data engineering spécialisé dans les environnements logistiques, il conçoit et industrialise des pipelines de données robustes, structure les flux d’information et met en place des outils de pilotage permettant d’optimiser la performance opérationnelle et la prise de décision',
     image: "https://www.linkedin.com/in/balth-mhs/overlay/photo/",
-    linkedin: "https://media.licdn.com/dms/image/v2/D4E03AQEyzAfmvw3uRQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1672759693738?e=1766620800&v=beta&t=4N80Qtr2AW90nEMJr3K4zhlpR49rYkAFGcxYbvl9Jro"
+    linkedin: "https://www.linkedin.com/in/balth-mhs/"
   }
 ];
 
