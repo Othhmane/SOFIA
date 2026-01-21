@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Linkedin, MessageCircle } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -12,7 +13,26 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+
+    emailjs
+      .send(
+        'service_nj6pq2k',      // Ton Service ID
+        'template_s5bx97j',     // Ton Template ID
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        '8DPeDN7iklHjzy44x'     // Ta Clé Publique
+      )
+      .then(() => {
+        alert('Email envoyé avec succès ✅');
+        setFormData({ name: '', email: '', message: '' });
+      })
+      .catch((error) => {
+        console.error('EmailJS error:', error);
+        alert('Erreur lors de l’envoi ❌');
+      });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -114,30 +134,18 @@ const Contact = () => {
                   <span className="text-gray-600">Cheraga, Alger, Algérie</span>
                 </div>
                 <div className="flex items-center">
-                <Linkedin className="h-5 w-5 text-primary-turquoise mr-3" />
-                <a
-                  href="https://www.linkedin.com/company/TON-LINK-ICI"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary-violet transition"
-                >
-                  LinkedIn – SOFIA
-                </a>
+                  <Linkedin className="h-5 w-5 text-primary-turquoise mr-3" />
+                  <a
+                    href="https://www.linkedin.com/company/TON-LINK-ICI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-primary-violet transition"
+                  >
+                    LinkedIn – SOFIA
+                  </a>
                 </div>
               </div>
             </div>
-          {/*
-            <div>
-              <h3 className="text-xl font-semibold text-primary-dark mb-4 font-poppins">
-                {t.contact.info.hours}
-              </h3>
-              <p className="text-gray-600 font-roboto">
-                {t.contact.info.weekdays}<br />
-                {t.contact.info.saturday}<br />
-                {t.contact.info.sunday}
-              </p>
-            </div>
-            */}
           </div>
         </div>
       </div>
