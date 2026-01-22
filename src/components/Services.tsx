@@ -121,7 +121,6 @@ const Services = () => {
                     className="w-full gradient-hover text-white px-6 py-3 rounded-lg transition-all duration-300 font-poppins"
                   >
                     En savoir plus
-                    <ArrowRight className="h-5 w-5" />
                   </button>
                 </div>
               </div>
