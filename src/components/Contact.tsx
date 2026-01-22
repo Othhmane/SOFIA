@@ -43,7 +43,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-[#F7F7F7]">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-primary-violet mb-4 font-poppins">{t.contact.title}</h2>
@@ -110,10 +110,14 @@ const Contact = () => {
                 {t.contact.info.title}
               </h3>
               <div className="space-y-4">
-                <div className="flex items-center">
-                  <Mail className="h-5 w-5 text-primary-turquoise mr-3" />
-                  <span className="text-gray-600">contact@dataai.com</span>
-                </div>
+                <a href="mailto:mohamed.anis.haddouche@gmail.com"
+                    className="flex items-center hover:opacity-80 transition-opacity duration-200 cursor-pointer"
+                    >
+                    <Mail className="h-5 w-5 text-primary-turquoise mr-3" />
+                    <span className="text-gray-600 hover:text-primary-violet transition-colors duration-200">
+                      mohamed.anis.haddouche@gmail.com
+                    </span>
+                  </a>
                 <div className="flex items-center">
                   <Phone className="h-5 w-5 text-primary-turquoise mr-3" />
                   <span className="text-gray-600">+33 07 66 55 20 73</span>

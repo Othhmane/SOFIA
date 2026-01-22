@@ -47,7 +47,7 @@ const APropos = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="a-propos" className="py-20 bg-gray-50">
+    <section id="team" className="py-20 bg-gray-50">
       {/* About Section */}
       <div className="container mx-auto px-6 mb-20">
         <div className="max-w-3xl mx-auto text-center mb-16">

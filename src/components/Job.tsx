@@ -1,131 +1,109 @@
 import { useState } from 'react';
+import { X, MapPin, Briefcase } from 'lucide-react';
 
 const offresEmploi = [
   {
-    title: 'Développeur Mobile',
-    type: 'Stage',
-    location: 'Alger, Algérie',
-    description: "Nous lançons une application mobile iOS & Android dédiée à la réservation d'Omra. L'objectif de cette application est de proposer une expérience simple, rapide et fiable pour réserver un package, suivre son dossier, et être accompagné avant et pendant le voyage.",
-    pdfUrl: '/job/OffreDev.pdf'
+    title: "Développeur Mobile",
+    type: "Stage",
+    location: "Alger, Algérie",
+    description:
+      "Nous lançons une application mobile iOS & Android dédiée à la réservation d'Omra. L'objectif est de proposer une expérience simple, rapide et fiable pour réserver un package, suivre son dossier, et être accompagné durant le voyage.",
+    pdfUrl: "/job/OffreDev.pdf",
   },
 ];
 
 const Job = () => {
   const [selectedPdf, setSelectedPdf] = useState(null);
-  const [expandedDescriptions, setExpandedDescriptions] = useState({});
-
-  const handleViewPdf = (pdfUrl) => {
-    setSelectedPdf(pdfUrl);
-  };
-
-  const closePdfViewer = () => {
-    setSelectedPdf(null);
-  };
-
-  const toggleDescription = (index) => {
-    setExpandedDescriptions(prev => ({
-      ...prev,
-      [index]: !prev[index]
-    }));
-  };
-
-  const isDescriptionLong = (description) => {
-    return description.length > 150;
-  };
-
-  const getTruncatedDescription = (description) => {
-    return description.substring(0, 150) + '...';
-  };
 
   return (
-    <section id="job" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-primary-violet mb-4 font-poppins">Nos offres d'emploi</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Rejoignez notre équipe et participez à des projets innovants
-          </p>
-        </div>
+    <>
+      <section id="job" className="py-24 bg-gray-50 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary-turquoise/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-violet/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
 
-        {/* Grille responsive avec espacement */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {offresEmploi.map((offre, index) => (
-            <div 
-              key={index} 
-              className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white flex flex-col h-full"
-            >
-              <div className="bg-gradient-to-r from-primary-violet to-blue-600 h-48 flex items-center justify-center flex-shrink-0">
-                <div className="text-center text-white">
-                  <svg className="w-16 h-16 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  <span className="text-sm font-semibold">{offre.type}</span>
-                </div>
-              </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 break-words">{offre.title}</h3>
-                <p className="text-blue-600 mb-3 flex items-center flex-wrap">
-                  <svg className="w-4 h-4 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <span className="break-words">{offre.location}</span>
-                </p>
-                
-                {/* Description avec bouton "Afficher la suite" */}
-                <div className="text-gray-600 mb-4 flex-grow">
-                  <p className="break-words">
-                    {expandedDescriptions[index] || !isDescriptionLong(offre.description)
-                      ? offre.description
-                      : getTruncatedDescription(offre.description)
-                    }
-                  </p>
-                  {isDescriptionLong(offre.description) && (
-                    <button
-                      onClick={() => toggleDescription(index)}
-                      className="text-primary-violet hover:text-blue-700 font-medium text-sm mt-2 transition-colors duration-200"
-                    >
-                      {expandedDescriptions[index] ? 'Afficher moins' : 'Afficher la suite'}
-                    </button>
-                  )}
-                </div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl font-bold text-primary-violet mb-6 font-poppins">
+              Nos offres d'emploi
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto font-roboto">
+              Nous recherchons des talents passionnés pour repousser les limites de la technologie.
+            </p>
+          </div>
 
-                <button
-                  onClick={() => handleViewPdf(offre.pdfUrl)}
-                  className="w-full bg-primary-violet hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300 mt-auto"
-                >
-                  Voir l'offre complète
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* PDF Viewer Modal */}
-      {selectedPdf && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-lg w-full max-w-6xl h-[90vh] flex flex-col">
-            <div className="flex justify-between items-center p-4 border-b">
-              <h3 className="text-xl font-semibold text-gray-900">Détails de l'offre</h3>
-              <button
-                onClick={closePdfViewer}
-                className="text-gray-500 hover:text-gray-700 text-2xl font-bold"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto">
+            {offresEmploi.map((offre, index) => (
+              <div
+                key={index}
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full overflow-hidden hover:-translate-y-2"
               >
-                ×
+                <div className="h-1 bg-gradient-to-r from-primary-violet to-primary-turquoise transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+
+                <div className="bg-gradient-to-r from-primary-violet to-primary-turquoise h-48 flex items-center justify-center relative overflow-hidden">
+                  <div className="text-center text-white relative z-10">
+                    <Briefcase className="w-16 h-16 mx-auto mb-3" />
+                    <span className="text-lg font-semibold bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                      {offre.type}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="p-8 flex flex-col flex-grow">
+                  <h3 className="text-2xl font-bold text-primary-dark mb-3 font-poppins group-hover:text-primary-violet transition-colors duration-300">
+                    {offre.title}
+                  </h3>
+                  <div className="flex items-center text-primary-turquoise font-semibold mb-4">
+                    <MapPin className="w-5 h-5 mr-2" />
+                    <span>{offre.location}</span>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed flex-grow">
+                    {offre.description}
+                  </p>
+                </div>
+
+                <div className="p-8 pt-0">
+                  <button
+                    onClick={() => setSelectedPdf(offre.pdfUrl)}
+                    className="w-full gradient-hover text-white px-6 py-3 rounded-lg transition-all duration-300 font-poppins"
+                  >
+                    Voir l'offre complète
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Modal PDF - RENDU EN DEHORS DE LA SECTION */}
+      {selectedPdf && (
+        <div
+          className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4"
+          style={{ zIndex: 999999, position: 'fixed' }}
+          onClick={() => setSelectedPdf(null)}
+        >
+          <div
+            className="bg-white rounded-2xl w-full max-w-6xl h-[90vh] shadow-2xl flex flex-col"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex justify-between items-center p-6 border-b bg-white rounded-t-2xl">
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-primary-violet to-primary-turquoise bg-clip-text text-transparent font-poppins">
+                Détails de l'offre
+              </h3>
+              <button
+                onClick={() => setSelectedPdf(null)}
+                className="text-gray-400 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-all"
+              >
+                <X className="h-6 w-6" />
               </button>
             </div>
-            <div className="flex-1 overflow-hidden">
-              <iframe
-                src={selectedPdf}
-                className="w-full h-full"
-                title="Offre d'emploi PDF"
-              />
+            <div className="flex-1 bg-gray-100">
+              <iframe src={selectedPdf} className="w-full h-full border-none" title="PDF Viewer" />
             </div>
           </div>
         </div>
       )}
-    </section>
+    </>
   );
 };
 

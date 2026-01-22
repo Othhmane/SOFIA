@@ -1,53 +1,161 @@
-// import React from 'react'; // Not needed with modern JSX Transform
+import { useState } from 'react';
+import { X } from 'lucide-react';
 
 const etudesDeCas = [
   {
     title: 'Plateforme d\'Analyse Financière',
     client: 'Global Banking Corp',
     description: 'Mise en place d\'un système d\'analyse prédictive améliorant la précision de l\'évaluation des risques de 40 %.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
+    details: 'Nous avons développé une plateforme complète d\'analyse financière intégrant des modèles de machine learning avancés pour prédire les risques de crédit. Le système analyse en temps réel des milliers de variables pour fournir des recommandations précises et fiables.'
   },
   {
     title: 'Solution IA pour la Santé',
     client: 'MedTech Innovations',
     description: 'Développement d\'un outil de diagnostic basé sur l\'IA atteignant une précision de 95 % pour la détection précoce des maladies.',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
+    details: 'Notre solution d\'intelligence artificielle analyse les images médicales et les données cliniques pour détecter précocement les pathologies. L\'outil a été validé cliniquement et est utilisé quotidiennement par des professionnels de santé.'
   },
   {
-    title: 'Optimisation de la Chaîne d’Approvisionnement',
+    title: 'Optimisation de la Chaîne d\'Approvisionnement',
     client: 'Global Logistics Co',
-    description: 'Réduction des coûts opérationnels de 30 % grâce à l’optimisation par apprentissage automatique.',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800'
+    description: 'Réduction des coûts opérationnels de 30 % grâce à l\'optimisation par apprentissage automatique.',
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800',
+    details: 'Mise en place d\'un système d\'optimisation logistique utilisant des algorithmes d\'apprentissage automatique pour prédire la demande, optimiser les stocks et réduire les délais de livraison. Les résultats ont dépassé les attentes avec une réduction significative des coûts.'
   }
 ];
 
 const Portfolio = () => {
-  return (
-    <section id="portfolio" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-primary-violet mb-4 font-poppins">Histoires de réussite</h2>
-          <p className="text-xl text-gray-600">Des résultats concrets pour des entreprises réelles</p>
-        </div>
+  const [selectedCase, setSelectedCase] = useState<typeof etudesDeCas[0] | null>(null);
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {etudesDeCas.map((study, index) => (
-            <div key={index} className="rounded-xl overflow-hidden shadow-lg">
+  return (
+    <>
+      <section id="portfolio" className="py-24 bg-white relative overflow-hidden">
+        {/* Decorative backgrounds */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary-turquoise/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-violet/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl font-bold text-primary-violet mb-6 font-poppins">
+              Histoires de réussite
+            </h2>
+            <p className="text-xl text-gray-600 font-roboto max-w-2xl mx-auto">
+              Des résultats concrets pour des entreprises réelles
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+            {etudesDeCas.map((study, index) => (
+              <div 
+                key={index}
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full overflow-hidden hover:-translate-y-2"
+              >
+                <div className="h-1 bg-gradient-to-r from-primary-violet to-primary-turquoise transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                
+                <div className="relative overflow-hidden h-48">
+                  <img 
+                    src={study.image} 
+                    alt={study.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                
+                <div className="p-8 flex-grow">
+                  <h3 className="text-2xl font-bold text-primary-dark mb-2 font-poppins group-hover:text-primary-violet transition-colors duration-300">
+                    {study.title}
+                  </h3>
+                  
+                  <p className="text-primary-turquoise font-semibold mb-3">
+                    {study.client}
+                  </p>
+                  
+                  <p className="text-gray-600 leading-relaxed">
+                    {study.description}
+                  </p>
+                </div>
+                
+                <div className="p-8 pt-0">
+                  <button
+                    onClick={() => setSelectedCase(study)}
+                    className="w-full gradient-hover text-white px-6 py-3 rounded-lg transition-all duration-300 font-poppins"
+                  >
+                    En savoir plus
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Modal - RENDU EN DEHORS DE LA SECTION */}
+      {selectedCase && (
+        <div 
+          className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4"
+          style={{ zIndex: 999999, position: 'fixed' }}
+          onClick={() => setSelectedCase(null)}
+        >
+          <div 
+            className="bg-white rounded-2xl p-8 md:p-10 max-w-3xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button 
+              onClick={() => setSelectedCase(null)}
+              className="absolute top-6 right-6 text-gray-400 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-all duration-300"
+            >
+              <X className="h-6 w-6" />
+            </button>
+            
+            <div className="rounded-xl overflow-hidden mb-6">
               <img 
-                src={study.image} 
-                alt={study.title}
-                className="w-full h-48 object-cover"
+                src={selectedCase.image} 
+                alt={selectedCase.title}
+                className="w-full h-64 object-cover"
               />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{study.title}</h3>
-                <p className="text-blue-600 mb-2">{study.client}</p>
-                <p className="text-gray-600">{study.description}</p>
+            </div>
+            
+            <h3 className="text-3xl font-bold bg-gradient-to-r from-primary-violet to-primary-turquoise bg-clip-text text-transparent mb-4 font-poppins pr-12">
+              {selectedCase.title}
+            </h3>
+            
+            <p className="text-xl text-primary-turquoise font-semibold mb-6">
+              {selectedCase.client}
+            </p>
+            
+            <div className="space-y-6">
+              <div className="p-6 bg-gradient-to-br from-gray-50 to-white rounded-xl border border-gray-200">
+                <h4 className="text-xl font-bold text-primary-dark mb-3 font-poppins">
+                  Le défi
+                </h4>
+                <p className="text-gray-600 font-roboto leading-relaxed">
+                  {selectedCase.description}
+                </p>
+              </div>
+              
+              <div className="p-6 bg-gradient-to-br from-gray-50 to-white rounded-xl border border-gray-200">
+                <h4 className="text-xl font-bold text-primary-dark mb-3 font-poppins">
+                  Notre solution
+                </h4>
+                <p className="text-gray-600 font-roboto leading-relaxed">
+                  {selectedCase.details}
+                </p>
               </div>
             </div>
-          ))}
+            
+            <div className="mt-8 pt-6 border-t border-gray-200">
+              <button
+                onClick={() => setSelectedCase(null)}
+                className="w-full bg-gradient-to-r from-primary-violet to-primary-turquoise text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Fermer
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      )}
+    </>
   );
 };
 

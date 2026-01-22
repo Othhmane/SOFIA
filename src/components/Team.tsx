@@ -26,7 +26,7 @@ const teamMembers = [
     name: 'Abdelhak DIFFALLAH',
     role: 'Business intelligence developer',
     bio: 'Consultant senior en analyse et pilotage de la performance, il cumule une solide expérience dans le numérique, la téléphonie mobile et le secteur pharmaceutique.',
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+    image: "/images/team/abdelahk2.png",
     linkedin: "https://www.linkedin.com/in/abdelhak-d-55707ba9/"
   },
   {

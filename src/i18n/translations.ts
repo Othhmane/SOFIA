@@ -7,7 +7,8 @@ export const translations = {
       portfolio: 'Portfolio',
       about: 'À Propos',
       contact: 'Contact',
-      team: 'Équipe'
+      team: 'Équipe',
+      job: 'Nos offres',
     },
     hero: {
       title: 'Transformez vos données en décisions stratégiques',
