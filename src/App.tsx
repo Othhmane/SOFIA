@@ -7,6 +7,7 @@ import Methodology from './components/Methodology';
 import Portfolio from './components/Portfolio';
 import Team from './components/Team';
 import Contact from './components/Contact';
+import Job from './components/Job';
 import { SITE_CONFIG } from './config/constants';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Services />
           <Methodology />
           <Portfolio />
+          <Job />
           <Team />
           <Contact />
         </main>
