@@ -31,15 +31,24 @@ const Job = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto">
+          {/* CONTENEUR MODIFIÉ POUR CENTRER */}
+          <div className="flex flex-wrap justify-center gap-8 lg:gap-10 max-w-7xl mx-auto">
+            
             {offresEmploi.map((offre, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full overflow-hidden hover:-translate-y-2"
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 
+                           border border-gray-100 flex flex-col h-full overflow-hidden hover:-translate-y-2
+                           w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.7rem)] max-w-md"
               >
-                <div className="h-1 bg-gradient-to-r from-primary-violet to-primary-turquoise transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                {/* Top accent bar */}
+                <div className="h-1 bg-gradient-to-r from-primary-violet to-primary-turquoise 
+                                transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500">
+                </div>
 
-                <div className="bg-gradient-to-r from-primary-violet to-primary-turquoise h-48 flex items-center justify-center relative overflow-hidden">
+                {/* Header Image/Icon Area */}
+                <div className="bg-gradient-to-r from-primary-violet to-primary-turquoise h-48 
+                                flex items-center justify-center relative overflow-hidden">
                   <div className="text-center text-white relative z-10">
                     <Briefcase className="w-16 h-16 mx-auto mb-3" />
                     <span className="text-lg font-semibold bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
@@ -48,6 +57,7 @@ const Job = () => {
                   </div>
                 </div>
 
+                {/* Content */}
                 <div className="p-8 flex flex-col flex-grow">
                   <h3 className="text-2xl font-bold text-primary-dark mb-3 font-poppins group-hover:text-primary-violet transition-colors duration-300">
                     {offre.title}
@@ -61,6 +71,7 @@ const Job = () => {
                   </p>
                 </div>
 
+                {/* Button */}
                 <div className="p-8 pt-0">
                   <button
                     onClick={() => setSelectedPdf(offre.pdfUrl)}
@@ -75,7 +86,7 @@ const Job = () => {
         </div>
       </section>
 
-      {/* Modal PDF - RENDU EN DEHORS DE LA SECTION */}
+      {/* Modal PDF - Rendu au-dessus de tout */}
       {selectedPdf && (
         <div
           className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4"

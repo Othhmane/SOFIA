@@ -118,7 +118,7 @@ const Services = () => {
                 <div className="p-8 pt-0">
                   <button
                     onClick={() => setSelectedService(service)}
-                    className="w-full bg-gradient-to-r from-primary-violet to-primary-turquoise text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2"
+                    className="w-full gradient-hover text-white px-6 py-3 rounded-lg transition-all duration-300 font-poppins"
                   >
                     En savoir plus
                     <ArrowRight className="h-5 w-5" />
