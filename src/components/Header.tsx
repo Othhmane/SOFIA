@@ -66,7 +66,7 @@ const Header = () => {
     >
       {/* Top gradient line */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-violet via-primary-turquoise to-primary-violet"></div>
-      
+ 
       <nav className="container mx-auto px-6">
         <div className="flex justify-between items-center">
           {/* Logo with animation */}
@@ -165,7 +165,9 @@ const Header = () => {
             </div>
           </div>
         </div>
+        
       </nav>
+
 
       <style jsx>{`
         @keyframes slide-in {
