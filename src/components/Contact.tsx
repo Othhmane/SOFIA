@@ -43,7 +43,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#F7F7F7]">
+    <section id="contact" className="py-20 bg-whote">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-primary-violet mb-4 font-poppins">{t.contact.title}</h2>
@@ -97,7 +97,7 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="w-full gradient-hover text-white px-6 py-3 rounded-lg transition-all duration-300 font-poppins"
+className="w-full group relative overflow-hidden bg-gradient-to-r from-primary-violet to-primary-turquoise text-white px-8 py-4 rounded-xl font-semibold font-poppins shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center"              
               >
                 {t.contact.form.send}
               </button>

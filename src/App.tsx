@@ -20,8 +20,8 @@ function App() {
           <Services />
           <Methodology />
           <Portfolio />
-          <Job />
           <Team />
+          <Job />
           <Contact />
         </main>
         <footer className="bg-primary-dark text-white py-8">
