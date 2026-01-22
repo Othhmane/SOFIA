@@ -15,7 +15,7 @@ const Header = () => {
       setScrolled(window.scrollY > 20);
       
       // Detect active section
-      const sections = ['home', 'services', 'methodologie', 'portfolio', 'job', 'team', 'contact'];
+      const sections = ['home', 'services', 'methodologie', 'portfolio', 'team', 'job' , 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -36,8 +36,8 @@ const Header = () => {
     { href: '#services', label: t.nav.services, id: 'services' },
     { href: '#methodologie', label: t.nav.methodology, id: 'methodologie' },
     { href: '#portfolio', label: t.nav.portfolio, id: 'portfolio' },
-    { href: '#job', label: t.nav.job, id: 'job' },
     { href: '#team', label: t.nav.team, id: 'team' },
+    { href: '#job', label: t.nav.job, id: 'job' },
     { href: '#contact', label: t.nav.contact, id: 'contact' }
   ];
 
