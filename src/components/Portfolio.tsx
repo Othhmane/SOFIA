@@ -80,7 +80,8 @@ const Portfolio = () => {
                   <button
                     onClick={() => setSelectedCase(study)}
                     className="w-full bg-gradient-to-r from-primary-violet to-primary-turquoise text-white px-8 py-4 rounded-xl font-semibold font-poppins shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
-                  >
+                 
+                 >
                     En savoir plus
                   </button>
                 </div>
