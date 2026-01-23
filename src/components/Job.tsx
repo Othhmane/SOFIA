@@ -73,15 +73,24 @@ const Job = () => {
 
                 {/* Button */}
                 <div className="p-8 pt-0">
-                  <button
-                    onClick={() => setSelectedPdf(offre.pdfUrl)}
-                    className="w-full bg-gradient-to-r from-primary-violet to-primary-turquoise text-white px-8 py-4 rounded-xl font-semibold font-poppins shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
-                  >
-                    
-                  
-                   
-                    Voir l'offre complète
-                  </button>
+<button
+  onClick={() => setSelectedPdf(offre.pdfUrl)}
+  className="
+    w-full
+    gradient-hover
+    text-white
+    px-8 py-4
+    rounded-xl
+    font-semibold font-poppins
+    shadow-lg
+    hover:shadow-2xl
+    transition-all duration-300
+    flex items-center justify-center
+  "
+>
+  Voir l'offre complète
+</button>
+
                 </div>
               </div>
             ))}

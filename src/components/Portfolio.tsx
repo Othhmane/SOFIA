@@ -77,13 +77,28 @@ const Portfolio = () => {
                 </div>
                 
                 <div className="p-8 pt-0">
-                  <button
-                    onClick={() => setSelectedCase(study)}
-                    className="w-full bg-gradient-to-r from-primary-violet to-primary-turquoise text-white px-8 py-4 rounded-xl font-semibold font-poppins shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
-                 
-                 >
-                    En savoir plus
-                  </button>
+<a
+  href="#"
+  onClick={(e) => {
+    e.preventDefault();
+    setSelectedCase(study);
+  }}
+  className="
+    gradient-hover
+    bg-clip-text text-transparent
+    font-semibold
+    relative
+    after:absolute after:left-0 after:-bottom-1
+    after:h-[2px] after:w-0
+    after:bg-gradient-to-r after:from-primary-violet after:to-primary-turquoise
+    after:transition-all after:duration-300
+    hover:after:w-full
+  "
+>
+  En savoir plus
+</a>
+
+
                 </div>
               </div>
             ))}

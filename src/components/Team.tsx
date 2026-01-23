@@ -123,13 +123,21 @@ const Team = () => {
                     {member.bio}
                   </p>
                   
-                  <button
+                  <a
                     onClick={() => setSelectedMember(member)}
-                    className="inline-flex items-center gap-2 text-primary-violet font-bold hover:text-primary-turquoise transition-colors group/btn"
-                  >
+                      className="
+                        gradient-hover
+                        bg-clip-text text-transparent
+                        font-semibold
+                        relative
+                        after:absolute after:left-0 after:-bottom-1
+                        after:h-[2px] after:w-0
+                        after:bg-gradient-to-r after:from-primary-violet after:to-primary-turquoise
+                        after:transition-all after:duration-300
+                        hover:after:w-full
+                      "                  >
                     En savoir plus 
-                    <ArrowRight className="h-4 w-4 transform group-hover/btn:translate-x-1 transition-transform" />
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}

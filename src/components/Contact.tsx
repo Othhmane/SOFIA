@@ -130,7 +130,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={status === 'sending'}
-                className="w-full group relative overflow-hidden bg-gradient-to-r from-primary-violet to-primary-turquoise text-white px-8 py-4 rounded-xl font-semibold font-poppins shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none"
+                className="w-full group relative overflow-hidden gradient-hover text-white px-8 py-4 rounded-xl font-semibold font-poppins shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none"
               >
                 {status === 'sending' ? (
                   <>
