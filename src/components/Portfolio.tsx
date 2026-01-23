@@ -26,7 +26,6 @@ const etudesDeCas = [
 ];
 
 const Portfolio = () => {
-  const [selectedCase, setSelectedCase] = useState<typeof etudesDeCas[0] | null>(null);
 
   return (
     <>
@@ -77,26 +76,7 @@ const Portfolio = () => {
                 </div>
                 
                 <div className="p-8 pt-0">
-<a
-  href="#"
-  onClick={(e) => {
-    e.preventDefault();
-    setSelectedCase(study);
-  }}
-  className="
-    gradient-hover
-    bg-clip-text text-transparent
-    font-semibold
-    relative
-    after:absolute after:left-0 after:-bottom-1
-    after:h-[2px] after:w-0
-    after:bg-gradient-to-r after:from-primary-violet after:to-primary-turquoise
-    after:transition-all after:duration-300
-    hover:after:w-full
-  "
->
-  En savoir plus
-</a>
+
 
 
                 </div>
@@ -106,71 +86,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Modal - RENDU EN DEHORS DE LA SECTION */}
-      {selectedCase && (
-        <div 
-          className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4"
-          style={{ zIndex: 999999, position: 'fixed' }}
-          onClick={() => setSelectedCase(null)}
-        >
-          <div 
-            className="bg-white rounded-2xl p-8 md:p-10 max-w-3xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button 
-              onClick={() => setSelectedCase(null)}
-              className="absolute top-6 right-6 text-gray-400 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-all duration-300"
-            >
-              <X className="h-6 w-6" />
-            </button>
-            
-            <div className="rounded-xl overflow-hidden mb-6">
-              <img 
-                src={selectedCase.image} 
-                alt={selectedCase.title}
-                className="w-full h-64 object-cover"
-              />
-            </div>
-            
-            <h3 className="text-3xl font-bold bg-gradient-to-r from-primary-violet to-primary-turquoise bg-clip-text text-transparent mb-4 font-poppins pr-12">
-              {selectedCase.title}
-            </h3>
-            
-            <p className="text-xl text-primary-turquoise font-semibold mb-6">
-              {selectedCase.client}
-            </p>
-            
-            <div className="space-y-6">
-              <div className="p-6 bg-gradient-to-br from-gray-50 to-white rounded-xl border border-gray-200">
-                <h4 className="text-xl font-bold text-primary-dark mb-3 font-poppins">
-                  Le défi
-                </h4>
-                <p className="text-gray-600 font-roboto leading-relaxed">
-                  {selectedCase.description}
-                </p>
-              </div>
-              
-              <div className="p-6 bg-gradient-to-br from-gray-50 to-white rounded-xl border border-gray-200">
-                <h4 className="text-xl font-bold text-primary-dark mb-3 font-poppins">
-                  Notre solution
-                </h4>
-                <p className="text-gray-600 font-roboto leading-relaxed">
-                  {selectedCase.details}
-                </p>
-              </div>
-            </div>
-            
-            <div className="mt-8 pt-6 border-t border-gray-200">
-              <button
-                onClick={() => setSelectedCase(null)}
-                className="w-full bg-gradient-to-r from-primary-violet to-primary-turquoise text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                Fermer
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 };
