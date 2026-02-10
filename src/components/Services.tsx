@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Brain, X, BarChart3, Users, ArrowRight } from 'lucide-react';
+import { Brain, X, BarChart3, Users, ArrowRight, ShieldCheck } from 'lucide-react';
 
 const services = [
   {
@@ -63,6 +63,27 @@ const services = [
         description: 'Suivi personnalisé et accompagnement continu pour assurer l\'adoption durable des solutions.'
       }
     ]
+
+  },
+  {
+    icon: <ShieldCheck className="h-8 w-8" />,
+    title: 'Consulting ALM & Risk Management',
+    description: 'Une approche hybride alliant expertise métier et solution technique pour moderniser votre gestion Actif-Passif (ALM) bancaire.',
+    highlight: 'Accélérateur de conformité Bâle II/III',
+    useCases: [
+      {
+        title: 'Intégration & Souveraineté',
+        description: 'Déploiement On-Premise sécurisé et connexion directe à vos Core Banking Systems (Amplitude, T24, etc.) pour une fiabilité totale des données.'
+      },
+      {
+        title: 'Conformité Réglementaire',
+        description: 'Automatisation des reportings Banque d\'Algérie et calcul des ratios de liquidité (LCR, NSFR) et de taux (Impasse, EVE, NII).'
+      },
+      {
+        title: 'Pilotage & Simulation',
+        description: 'Tableaux de bord dynamiques pour vos comités ALM : simulation de scénarios de crise, stress tests et projection des marges.'
+      }
+    ]
   }
 ];
 
@@ -74,7 +95,7 @@ const Services = () => {
       <section id="services" className="py-24 bg-[#F7F7F7] relative overflow-hidden">
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary-turquoise/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-violet/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-5xl font-bold text-primary-violet mb-6 font-poppins">
@@ -84,37 +105,37 @@ const Services = () => {
               Des solutions complètes en BI, IA et formation pour transformer votre entreprise
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
             {services.map((service, index) => (
-              <div 
+              <div
                 key={index}
                 className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full overflow-hidden hover:-translate-y-2"
               >
                 <div className="h-1 bg-gradient-to-r from-primary-violet to-primary-turquoise transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-                
+
                 <div className="p-8 flex-grow">
                   <div className="bg-gradient-to-br from-primary-turquoise/10 to-primary-violet/10 group-hover:from-primary-violet group-hover:to-primary-turquoise p-4 rounded-xl inline-flex mb-6 transition-all duration-500 group-hover:scale-110">
                     <div className="text-primary-turquoise group-hover:text-white transition-colors duration-500">
                       {service.icon}
                     </div>
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold text-primary-dark mb-4 font-poppins group-hover:text-primary-violet transition-colors duration-300">
                     {service.title}
                   </h3>
-                  
+
                   <p className="text-gray-600 leading-relaxed mb-3">
                     {service.description}
                   </p>
-                  
+
                   {service.highlight && (
                     <p className="text-primary-violet font-semibold">
                       {service.highlight}
                     </p>
                   )}
                 </div>
-                
+
                 <div className="p-8 pt-0">
                   <a
                     onClick={() => setSelectedService(service)}
@@ -140,30 +161,30 @@ const Services = () => {
 
       {/* Modal - RENDU EN DEHORS DE LA SECTION */}
       {selectedService && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4"
           style={{ zIndex: 999999, position: 'fixed' }}
           onClick={() => setSelectedService(null)}
         >
-          <div 
+          <div
             className="bg-white rounded-2xl p-8 md:p-10 max-w-3xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <button 
+            <button
               onClick={() => setSelectedService(null)}
               className="absolute top-6 right-6 text-gray-400 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-all duration-300"
             >
               <X className="h-6 w-6" />
             </button>
-            
+
             <div className="bg-gradient-to-br from-primary-violet to-primary-turquoise p-4 rounded-xl text-white inline-flex mb-6">
               {selectedService.icon}
             </div>
-            
+
             <h3 className="text-3xl font-bold bg-gradient-to-r from-primary-violet to-primary-turquoise bg-clip-text text-transparent mb-8 font-poppins pr-12">
               {selectedService.title}
             </h3>
-            
+
             <div className="space-y-6">
               {selectedService.useCases.map((useCase, index) => (
                 <div
@@ -179,7 +200,7 @@ const Services = () => {
                 </div>
               ))}
             </div>
-            
+
             <div className="mt-8 pt-6 border-t border-gray-200">
               <button
                 onClick={() => setSelectedService(null)}
